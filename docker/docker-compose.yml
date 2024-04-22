@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  tango2:
+    container_name: tango2
+    image: maximofn/tango2:1.0.1
+    build: .
+    runtime: nvidia
+    network_mode: "host"
+    volumes:
+      - ./hub:/root/.cache/huggingface/hub
+      - ./gradio_cached_examples:/tango2/gradio_cached_examples
+    tty: true
+    stdin_open: true

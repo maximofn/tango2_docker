@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  tango2:
+    entrypoint: ["bash", "-c", "python app.py"]
